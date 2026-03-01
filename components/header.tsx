@@ -11,6 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 const NAV_LINKS = [
   { label: "HOME", href: "/" },
   { label: "ABOUT US", href: "/about" },
+  { label: "NEWS & EVENTS", href: "/events" },
   { label: "ADMISSIONS", href: "/admissions" },
   { label: "ACADEMICS", href: "/academics" },
   { label: "STAFF", href: "/staff" },

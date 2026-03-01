@@ -389,10 +389,10 @@ const ContactPage: React.FC = () => {
         items={[{ label: "Home", href: "/" }, { label: "Contact Us" }]}
       />
 
-      <section className="bg-gray-50 py-16 ">
+      <section className="bg-gray-50 py-16">
         <div className="space-y-16">
           {/* ── ROW 2: FAQs ── */}
-          <div className="max-w-7xl mx-auto ">
+          <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-10">
               <div className="flex items-center justify-center gap-3 mb-2">
                 <span
@@ -482,7 +482,7 @@ const ContactPage: React.FC = () => {
           </div>
 
           {/* ── ROW 1: Contact Info cards + Form ── */}
-          <div className="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto ">
+          <div className="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto px-6">
             {/* Left: Info cards */}
             <div className="w-full lg:w-80 flex-shrink-0 space-y-4">
               <div className="mb-6">

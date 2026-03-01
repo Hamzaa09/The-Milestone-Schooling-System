@@ -180,7 +180,7 @@ export default function Footer() {
             {/* Admission & Academics  */}
             <div>
               <p className="text-lg font-bold tracking-wide text-[#1f5fc4] uppercase">
-                Academics & Admission
+                Related Links
               </p>
 
               <ul className="mt-6 space-y-2 md:space-y-4">
@@ -190,7 +190,37 @@ export default function Footer() {
                     title=""
                     className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
                   >
-                    Admission Policy
+                    FAQs
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    title=""
+                    className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
+                  >
+                    Locate Us
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    title=""
+                    className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
+                  >
+                    Send an Inquiry
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    title=""
+                    className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
+                  >
+                    Admission Process
                   </a>
                 </li>
 
@@ -210,17 +240,7 @@ export default function Footer() {
                     title=""
                     className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
                   >
-                    Academics Terms
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    title=""
-                    className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
-                  >
-                    Academics Conditions
+                    Academics Details
                   </a>
                 </li>
               </ul>
