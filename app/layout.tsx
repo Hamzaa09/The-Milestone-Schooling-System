@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto, Roboto_Mono } from "next/font/google";
+import ScrollToTop from "@/components/scrolltotop";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const robotoSans = Roboto({
   variable: "--font-roboto-sans",
@@ -28,7 +31,10 @@ export default function RootLayout({
       <body
         className={`${robotoSans.variable} ${robotoMono.variable} antialiased`}
       >
+        <Header />
         {children}
+        <ScrollToTop />
+        <Footer />
       </body>
     </html>
   );

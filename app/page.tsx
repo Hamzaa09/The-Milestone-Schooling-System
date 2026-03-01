@@ -1,6 +1,4 @@
 import EmblaCarousel from "@/components/carousal";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
 import { EmblaOptionsType } from "embla-carousel";
 import "@/css/embla.css";
 import AboutSchool from "@/components/about";
@@ -15,9 +13,7 @@ export default function Home() {
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
   return (
-    <div className="h-220 flex flex-col justify-between items-center">
-      <Header />
-
+    <div>
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
 
       <AboutSchool />
@@ -29,8 +25,6 @@ export default function Home() {
       <WhyMilestone />
 
       <Testimonials />
-
-      <Footer />
     </div>
   );
 }
