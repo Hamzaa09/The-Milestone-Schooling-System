@@ -4,52 +4,70 @@ import React, { useEffect, useState } from "react";
 
 interface NewsItem {
   id: number;
-  image: string;
   title: string;
   excerpt: string;
+  content: string;
   date: string;
+  category: string;
+  image: string;
+  author: string;
 }
 
 const newsItems: NewsItem[] = [
   {
     id: 1,
-    image: "https://placehold.co/400x250/1a56db/ffffff?text=Event+1",
-    title: "Annual Prize Distribution Ceremony",
-    date: "March 10, 2024",
+    title: "Annual Prize Distribution Ceremony 2024",
     excerpt:
-      "The Milestone Schooling System held its annual prize distribution ceremony honoring top students from all grades...",
+      "The Milestone Schooling System held its grand annual prize distribution ceremony, honoring top-performing students across all grade levels with awards and certificates.",
+    content: "",
+    date: "March 10, 2024",
+    category: "Events",
+    image: "/news-events/img-1.jpg",
+    author: "Admin",
   },
   {
     id: 2,
-    image: "https://placehold.co/400x250/1a56db/ffffff?text=Event+2",
-    title: "Science Exhibition 2024",
-    date: "February 22, 2024",
+    title: "Science Exhibition Showcases Student Innovation",
     excerpt:
-      "Students showcased innovative science projects at the annual Science Exhibition, drawing praise from faculty and parents...",
+      "Students from Class V to X presented remarkable science projects at the annual Science Exhibition, impressing faculty, parents, and guest judges with their creativity.",
+    content: "",
+    date: "February 22, 2024",
+    category: "Academics",
+    image: "/news-events/img-2.jpg",
+    author: "Admin",
   },
   {
     id: 3,
-    image: "https://placehold.co/400x250/1a56db/ffffff?text=Event+3",
-    title: "New Academic Year Enrollment Open",
-    date: "January 15, 2024",
+    title: "PAF Museum Educational Visit",
     excerpt:
-      "Admissions are now open for the new academic year. Register your child at the nearest Milestone campus today...",
+      "Students of The Milestone Schooling System enjoyed an enriching educational trip to the PAF Museum, exploring the history of Pakistan's Air Force through interactive exhibits and historic aircraft displays.",
+    content: "",
+    date: "March 5, 2024",
+    category: "Events",
+    image: "/news-events/img-5.jpg",
+    author: "Admin",
   },
   {
     id: 4,
-    image: "https://placehold.co/400x250/1a56db/ffffff?text=Event+4",
-    title: "Teachers Training Workshop",
-    date: "December 5, 2023",
+    title: "Namaz Education Course Launched for All Students",
     excerpt:
-      "Our faculty participated in an intensive professional development workshop to enhance modern teaching methodologies...",
+      "The Milestone Schooling System has introduced a dedicated Namaz Education Course to help students learn the correct method, importance, and spiritual significance of daily prayers in Islam.",
+    content: "",
+    date: "February 10, 2024",
+    category: "Academics",
+    image: "/news-events/img-6.jpg",
+    author: "Admin",
   },
   {
     id: 5,
-    image: "https://placehold.co/400x250/1a56db/ffffff?text=Event+5",
-    title: "Inter-School Sports Competition",
-    date: "November 18, 2023",
+    title: "Pakistan Independence Day Celebrated with Enthusiasm",
     excerpt:
-      "Milestone students excelled at the inter-school sports competition, bringing home multiple trophies and medals...",
+      "Students, teachers, and staff came together for a vibrant Independence Day celebration featuring speeches, national songs, flag hoisting, and cultural performances.",
+    content: "",
+    date: "August 14, 2023",
+    category: "Events",
+    image: "/news-events/img-3.jpg",
+    author: "Admin",
   },
 ];
 
@@ -156,7 +174,7 @@ const NewsEvents: React.FC = () => {
                     <span className="text-xs text-gray-400 font-medium">
                       {item.date}
                     </span>
-                    <h3 className="text-sm font-bold text-[#1f5fc4] leading-snug hover:text-blue-800 cursor-pointer transition-colors">
+                    <h3 className="text-sm font-bold text-[#1f5fc4] leading-snug hover:text-blue-800 cursor-pointer transition-colors line-clamp-1">
                       {item.title}
                     </h3>
                     <p className="text-xs text-gray-500 leading-relaxed line-clamp-3">

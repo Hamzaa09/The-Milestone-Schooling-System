@@ -20,7 +20,7 @@ const principal = {
   designation: "Principal",
   qualification: "M.Ed, University of Karachi",
   bio: "With over 20 years in education, Mr. Malik leads The Milestone Schooling System with a vision of academic excellence and character development. He believes every child has the potential to achieve greatness with the right guidance and environment.",
-  image: "https://placehold.co/300x300/1a3272/ffffff?text=AM",
+  image: "/principal-photo/img-1.jpg",
 };
 
 const staffMembers: StaffMember[] = [

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
@@ -33,8 +33,8 @@ const EmblaCarousel = (props: PropType) => {
             <div className="embla__slide" key={index}>
               <img
                 className="embla__slide__img"
-                src={`https://picsum.photos/600/350?v=${index}`}
-                alt="Your alt text"
+                src={`/main-carousal/img-${index+1}.jpg`}
+                alt="img"
               />
             </div>
           ))}

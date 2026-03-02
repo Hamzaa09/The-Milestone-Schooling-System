@@ -51,7 +51,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Phone",
-    value: "+92 348 5379 552",
+    value: "+92 300 2371 990",
     href: "tel:+923485379552",
   },
   {
@@ -72,8 +72,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Email",
-    value: "hamza036513@gmail.com",
-    href: "mailto:hamza036513@gmail.com",
+    value: "owaisabdulkhaliq17@gmail.com",
+    href: "mailto:owaisabdulkhaliq17@gmail.com",
   },
   {
     icon: (
@@ -180,7 +180,7 @@ const FAQItem: React.FC<{ q: string; a: string; index: number }> = ({
         className="overflow-hidden transition-all duration-300"
         style={{ maxHeight: open ? "200px" : "0px" }}
       >
-        <p className="px-6 pb-5 pt-1 text-sm text-gray-500 leading-relaxed pl-[4.25rem]">
+        <p className="px-6 pb-5 pt-1 text-sm text-gray-500 leading-relaxed pl-17">
           {a}
         </p>
       </div>
@@ -543,18 +543,17 @@ const ContactPage: React.FC = () => {
                 </p>
                 <div className="flex gap-3">
                   {[
-                    { label: "Facebook", color: "#1877f2", icon: "f" },
-                    { label: "Instagram", color: "#e1306c", icon: "in" },
-                    { label: "X", color: "#000", icon: "𝕏" },
+                    { label: "Facebook", src: "/icons/facebook.png" },
+                    { label: "Instagram", src: "/icons/instagram.png" },
+                    { label: "Twitter", src: "/icons/twitter.png" },
                   ].map((s) => (
                     <a
                       key={s.label}
                       href="#"
-                      className="w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-extrabold hover:scale-110 transition-transform duration-200"
-                      style={{ background: s.color }}
+                      className="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-extrabold hover:scale-110 transition-transform duration-200"
                       aria-label={s.label}
                     >
-                      {s.icon}
+                      <img src={s.src} alt={s.label} />
                     </a>
                   ))}
                 </div>

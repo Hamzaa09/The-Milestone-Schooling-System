@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSchool: React.FC = () => {
   return (
-    <div className="bg-white py-24 px-6 md:px-16 lg:px-24">
+    <div className="bg-white py-16 lg:py-24 px-6 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10">
         {/* Left: Text Content */}
         <div className="flex-1">
@@ -10,9 +10,9 @@ const AboutSchool: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 uppercase leading-tight mb-6">
             About
             <br />
-            The Milestone
+            <span className="text-[#2e6fd4]">The Milestone</span>
             <br />
-            Schooling System
+            <span className="text-[#2e6fd4]">Schooling System</span>
           </h2>
 
           {/* Description */}

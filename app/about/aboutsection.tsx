@@ -4,13 +4,9 @@ const AboutSection: React.FC = () => {
   return (
     <section className="bg-gray-50 py-16 px-6 md:px-16 lg:px-24">
       <div className="max-w-6xl mx-auto">
-
         {/* Top label */}
         <div className="flex items-center gap-3 mb-8">
-          <span
-            className="h-0.5 w-10"
-            style={{ background: "#1a56db" }}
-          />
+          <span className="h-0.5 w-10" style={{ background: "#1a56db" }} />
           <span
             className="text-xs font-bold uppercase tracking-widest"
             style={{ color: "#1a56db" }}
@@ -18,93 +14,74 @@ const AboutSection: React.FC = () => {
             Who We Are
           </span>
         </div>
-
         {/* Main content: image + text */}
-        <div className="flex flex-col md:flex-row gap-10 items-start">
-
-          {/* Left: Photo */}
-          <div className="w-full md:w-80 shrink-0">
+        <div className="max-w-6xl mx-auto">
+          {/* Float left image */}
+          <div className="float-left mr-8 mb-4 w-64 md:w-80">
             <div
-              className="relative rounded-lg overflow-hidden shadow-xl"
-              style={{ border: "4px solid #1a56db" }}
+              className="overflow-hidden shadow-md/30"
             >
               <img
-                src="https://placehold.co/400x480/1a3272/ffffff?text=Principal"
+                src="/principal-photo/img-1.jpg"
                 alt="Principal"
                 className="w-full h-auto object-cover"
               />
-              {/* Name badge overlaid at bottom */}
-              <div
-                className="absolute bottom-0 left-0 right-0 py-4 px-4 text-white text-center"
-                style={{ background: "rgba(26,50,114,0.92)" }}
-              >
-                <p className="font-extrabold text-base leading-tight">
-                  Mr. [Principal Name]
-                </p>
-                <p className="text-xs mt-1" style={{ color: "#fbbf24" }}>
-                  Principal, The Milestone Schooling System
-                </p>
-              </div>
             </div>
           </div>
 
-          {/* Right: Text */}
-          <div className="flex-1 min-w-0">
-            <h2
-              className="text-2xl md:text-3xl font-extrabold mb-2 leading-snug"
-              style={{ color: "#1a3272" }}
-            >
+          {/* Text flows and wraps under image */}
+          <h2
+            className="text-2xl md:text-3xl font-extrabold mb-2 leading-snug"
+            style={{ color: "#1a3272" }}
+          >
+            Mr. Owais Abdul Khaliq
+          </h2>
+
+          <div
+            className="h-1 w-16 rounded mb-6"
+            style={{ background: "#1a56db" }}
+          />
+
+          <div className="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed">
+            <p>
+              "Welcome to The Milestone Schooling System. We believe every child
+              deserves an education that nurtures not just academic excellence,
+              but character, confidence, and curiosity. Our mission is to create
+              a safe, inclusive, and inspiring environment where students can
+              discover their true potential.
+            </p>
+            <p>
+              Since our establishment, we have remained committed to delivering
+              quality education that meets both national and international
+              standards. Our experienced faculty, modern curriculum, and caring
+              community make Milestone a place where students don't just learn —
+              they grow.
+            </p>
+            <p>
+              We are proud of the achievements of our students and remain
+              dedicated to upholding the trust that parents and families place
+              in us. Together, we are building the next generation of
+              thoughtful, capable, and compassionate leaders.
+            </p>
+            <p>
+              We invite you to be a part of the Milestone family — where every
+              child's journey matters."
+            </p>
+          </div>
+
+          {/* Signature */}
+          <div className="mt-8 pt-6 border-t border-gray-200">
+            <p className="font-extrabold text-lg" style={{ color: "#1a3272" }}>
               Mr. Owais Abdul Khaliq
-            </h2>
-
-            {/* Blue underline accent */}
-            <div
-              className="h-1 w-16 rounded mb-6"
-              style={{ background: "#1a56db" }}
-            />
-
-            <div className="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed">
-              <p>
-                "Welcome to The Milestone Schooling System. We believe every
-                child deserves an education that nurtures not just academic
-                excellence, but character, confidence, and curiosity. Our
-                mission is to create a safe, inclusive, and inspiring
-                environment where students can discover their true potential.
-              </p>
-              <p>
-                Since our establishment, we have remained committed to
-                delivering quality education that meets both national and
-                international standards. Our experienced faculty, modern
-                curriculum, and caring community make Milestone a place where
-                students don't just learn — they grow.
-              </p>
-              <p>
-                We are proud of the achievements of our students and remain
-                dedicated to upholding the trust that parents and families
-                place in us. Together, we are building the next generation of
-                thoughtful, capable, and compassionate leaders.
-              </p>
-              <p>
-                We invite you to be a part of the Milestone family — where
-                every child's journey matters."
-              </p>
-            </div>
-
-            {/* Signature */}
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <p
-                className="font-extrabold text-lg"
-                style={{ color: "#1a3272" }}
-              >
-                Mr. Owais Abdul Khaliq
-              </p>
-              <p className="text-sm text-gray-400 mt-1">
-                Principal — The Milestone Schooling System
-              </p>
-            </div>
+            </p>
+            <p className="text-sm text-gray-400 mt-1">
+              Principal — The Milestone Schooling System
+            </p>
           </div>
-        </div>
 
+          {/* Clear float */}
+          <div className="clear-both" />
+        </div>
         {/* Bottom highlight cards
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
           {[
@@ -158,7 +135,6 @@ const AboutSection: React.FC = () => {
             </div>
           ))}
         </div> */}
-
       </div>
     </section>
   );

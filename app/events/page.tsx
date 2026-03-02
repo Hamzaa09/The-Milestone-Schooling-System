@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Breadcrumb from "@/components/breadcrum";
+import { FaArrowRightArrowLeft } from "react-icons/fa6";
+import { ArrowRight, ArrowRightIcon } from "lucide-react";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
@@ -25,7 +27,7 @@ const newsItems: NewsItem[] = [
     content: "",
     date: "March 10, 2024",
     category: "Events",
-    image: "https://placehold.co/400x280/1a3272/ffffff?text=Prize+Ceremony",
+    image: "/news-events/img-1.jpg",
     author: "Admin",
   },
   {
@@ -36,81 +38,55 @@ const newsItems: NewsItem[] = [
     content: "",
     date: "February 22, 2024",
     category: "Academics",
-    image: "https://placehold.co/400x280/1a56db/ffffff?text=Science+Exhibition",
+    image: "/news-events/img-2.jpg",
     author: "Admin",
   },
   {
     id: 3,
-    title: "Admissions Now Open for Academic Year 2024–25",
+    title: "PAF Museum Educational Visit",
     excerpt:
-      "The Milestone Schooling System is pleased to announce that admissions are now open for all classes from Play Group to Class X for the upcoming academic year.",
+      "Students of The Milestone Schooling System enjoyed an enriching educational trip to the PAF Museum, exploring the history of Pakistan's Air Force through interactive exhibits and historic aircraft displays.",
     content: "",
-    date: "January 15, 2024",
-    category: "Admissions",
-    image: "https://placehold.co/400x280/1a3272/ffffff?text=Admissions+Open",
+    date: "March 5, 2024",
+    category: "Events",
+    image: "/news-events/img-5.jpg",
     author: "Admin",
   },
   {
     id: 4,
-    title: "Teachers Complete Professional Development Workshop",
+    title: "Namaz Education Course Launched for All Students",
     excerpt:
-      "Our dedicated teaching faculty participated in a two-day intensive professional development workshop focused on modern pedagogical techniques and student engagement strategies.",
+      "The Milestone Schooling System has introduced a dedicated Namaz Education Course to help students learn the correct method, importance, and spiritual significance of daily prayers in Islam.",
     content: "",
-    date: "December 5, 2023",
-    category: "Staff",
-    image: "https://placehold.co/400x280/1a56db/ffffff?text=Teacher+Training",
+    date: "February 10, 2024",
+    category: "Academics",
+    image: "/news-events/img-6.jpg",
     author: "Admin",
   },
   {
     id: 5,
-    title: "Milestone Students Excel at Inter-School Competition",
-    excerpt:
-      "Our students brought home 5 trophies and 8 medals from the annual inter-school sports and academic competition held at City Grammar School, Karachi.",
-    content: "",
-    date: "November 18, 2023",
-    category: "Achievements",
-    image: "https://placehold.co/400x280/1a3272/ffffff?text=Sports+Competition",
-    author: "Admin",
-  },
-  {
-    id: 6,
-    title: "New Computer Lab Inaugurated at Milestone",
-    excerpt:
-      "The Milestone Schooling System proudly inaugurated a state-of-the-art computer lab equipped with 30 modern workstations to enhance digital literacy across all grades.",
-    content: "",
-    date: "October 30, 2023",
-    category: "Events",
-    image: "https://placehold.co/400x280/1a56db/ffffff?text=Computer+Lab",
-    author: "Admin",
-  },
-  {
-    id: 7,
     title: "Pakistan Independence Day Celebrated with Enthusiasm",
     excerpt:
       "Students, teachers, and staff came together for a vibrant Independence Day celebration featuring speeches, national songs, flag hoisting, and cultural performances.",
     content: "",
     date: "August 14, 2023",
     category: "Events",
-    image: "https://placehold.co/400x280/1a3272/ffffff?text=Independence+Day",
-    author: "Admin",
-  },
-  {
-    id: 8,
-    title: "Board Result: Milestone Students Achieve Outstanding Scores",
-    excerpt:
-      "We are proud to announce that our Matric students achieved exceptional results in the Board Examinations, with several students ranking among the top positions in the district.",
-    content: "",
-    date: "July 20, 2023",
-    category: "Achievements",
-    image: "https://placehold.co/400x280/1a56db/ffffff?text=Board+Results",
+    image: "/news-events/img-3.jpg",
     author: "Admin",
   },
 ];
 
-const categories = ["All", "Events", "Academics", "Admissions", "Achievements", "Staff"];
+const categories = [
+  "All",
+  "Events",
+  "Academics",
+  "Admissions",
+  "Achievements",
+  "Staff",
+];
 
 const categoryColors: Record<string, string> = {
-  Events: "#1a56db",
+  Events: "#2e6fd4",
   Academics: "#0e9f6e",
   Admissions: "#f6ad10",
   Achievements: "#e53e3e",
@@ -121,14 +97,13 @@ const categoryColors: Record<string, string> = {
 
 const NewsCard: React.FC<{ item: NewsItem }> = ({ item }) => {
   return (
-    <article className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row group">
-      
+    <article className="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col sm:flex-row group hover:scale-102 transition-transform duration-300 hover:shadow-xl hover:cursor-pointer">
       {/* Left: Image */}
-      <div className="w-full sm:w-56 md:w-64 flex-shrink-0 overflow-hidden">
+      <div className="w-full sm:w-56 md:w-64 shrink-0 overflow-hidden hover:scale-105 transition-transform duration-300">
         <img
           src={item.image}
           alt={item.title}
-          className="w-full h-48 sm:h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-48 sm:h-full object-cover"
         />
       </div>
 
@@ -139,13 +114,24 @@ const NewsCard: React.FC<{ item: NewsItem }> = ({ item }) => {
           <div className="flex items-center gap-3 mb-3 flex-wrap">
             <span
               className="text-xs font-extrabold uppercase tracking-widest px-3 py-1 rounded-full text-white"
-              style={{ background: categoryColors[item.category] || "#1a56db" }}
+              style={{ background: categoryColors[item.category] || "#2e6fd4" }}
             >
               {item.category}
             </span>
             <div className="flex items-center gap-1.5 text-gray-400">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-3.5 w-3.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
               </svg>
               <span className="text-xs">{item.date}</span>
             </div>
@@ -170,16 +156,23 @@ const NewsCard: React.FC<{ item: NewsItem }> = ({ item }) => {
           <div className="flex items-center gap-2">
             <div
               className="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold"
-              style={{ background: "#1a56db" }}
+              style={{ background: "#2e6fd4" }}
             >
               {item.author[0]}
             </div>
-            <span className="text-xs text-gray-400 font-medium">{item.author}</span>
+            <span className="text-xs text-gray-400 font-medium">
+              {item.author}
+            </span>
           </div>
+
+          <button className="mt-2 self-start bg-green-600 hover:bg-green-700 hover:cursor-pointer text-white text-xs font-bold uppercase tracking-wider px-5 py-2 transition-colors duration-200 flex items-center gap-1.5 rounded">
+            Read More
+            <ArrowRightIcon className="size-4"/>
+          </button>
 
           {/* <button
             className="flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wide transition-all duration-200 group-hover:gap-3"
-            style={{ color: "#1a56db" }}
+            style={{ color: "#2e6fd4" }}
           >
             Read More
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -199,7 +192,8 @@ const NewsPage: React.FC = () => {
   const [search, setSearch] = useState("");
 
   const filtered = newsItems.filter((n) => {
-    const matchesCat = activeCategory === "All" || n.category === activeCategory;
+    const matchesCat =
+      activeCategory === "All" || n.category === activeCategory;
     const matchesSearch = n.title.toLowerCase().includes(search.toLowerCase());
     return matchesCat && matchesSearch;
   });
@@ -213,22 +207,33 @@ const NewsPage: React.FC = () => {
 
       <section className="bg-gray-50 min-h-screen py-16 px-4 md:px-10 lg:px-20">
         <div className="max-w-5xl mx-auto">
-
           {/* Heading */}
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-2">
-              <span className="h-0.5 w-8 rounded" style={{ background: "#1a56db" }} />
-              <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#1a56db" }}>
+              <span
+                className="h-0.5 w-8 rounded"
+                style={{ background: "#2e6fd4" }}
+              />
+              <span
+                className="text-xs font-bold uppercase tracking-widest"
+                style={{ color: "#2e6fd4" }}
+              >
                 Latest Updates
               </span>
-              <span className="h-0.5 w-8 rounded" style={{ background: "#1a56db" }} />
+              <span
+                className="h-0.5 w-8 rounded"
+                style={{ background: "#2e6fd4" }}
+              />
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold" style={{ color: "#1a3272" }}>
+            <h2
+              className="text-3xl md:text-4xl font-extrabold"
+              style={{ color: "#1a3272" }}
+            >
               News &amp; Events
             </h2>
             <p className="text-gray-400 text-sm mt-3 max-w-lg mx-auto">
-              Stay up to date with the latest happenings, achievements, and announcements
-              from The Milestone Schooling System.
+              Stay up to date with the latest happenings, achievements, and
+              announcements from The Milestone Schooling System.
             </p>
           </div>
 
@@ -242,11 +247,12 @@ const NewsPage: React.FC = () => {
                   onClick={() => setActiveCategory(cat)}
                   className="px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-200"
                   style={{
-                    background: activeCategory === cat ? "#1a56db" : "#fff",
+                    background: activeCategory === cat ? "#2e6fd4" : "#fff",
                     color: activeCategory === cat ? "#fff" : "#64748b",
-                    boxShadow: activeCategory === cat
-                      ? "0 4px 14px rgba(26,86,219,0.3)"
-                      : "0 1px 4px rgba(0,0,0,0.08)",
+                    boxShadow:
+                      activeCategory === cat
+                        ? "0 4px 14px rgba(26,86,219,0.3)"
+                        : "0 1px 4px rgba(0,0,0,0.08)",
                   }}
                 >
                   {cat}
@@ -259,9 +265,16 @@ const NewsPage: React.FC = () => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
               </svg>
               <input
                 type="text"
@@ -276,7 +289,7 @@ const NewsPage: React.FC = () => {
           {/* Count */}
           <p className="text-xs text-gray-400 mb-6">
             Showing{" "}
-            <span className="font-bold" style={{ color: "#1a56db" }}>
+            <span className="font-bold" style={{ color: "#2e6fd4" }}>
               {filtered.length}
             </span>{" "}
             article{filtered.length !== 1 ? "s" : ""}
@@ -291,20 +304,33 @@ const NewsPage: React.FC = () => {
             </div>
           ) : (
             <div className="text-center py-24 text-gray-400">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-4 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-12 mx-auto mb-4 opacity-30"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                />
               </svg>
               <p className="font-semibold text-sm">No news articles found.</p>
               <button
-                onClick={() => { setActiveCategory("All"); setSearch(""); }}
+                onClick={() => {
+                  setActiveCategory("All");
+                  setSearch("");
+                }}
                 className="mt-3 text-xs underline font-semibold"
-                style={{ color: "#1a56db" }}
+                style={{ color: "#2e6fd4" }}
               >
                 Clear filters
               </button>
             </div>
           )}
-
         </div>
       </section>
     </main>

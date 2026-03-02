@@ -4,6 +4,7 @@ import { Roboto, Roboto_Mono } from "next/font/google";
 import ScrollToTop from "@/components/scrolltotop";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import TopBar from "@/components/topbar";
 
 const robotoSans = Roboto({
   variable: "--font-roboto-sans",
@@ -31,6 +32,9 @@ export default function RootLayout({
       <body
         className={`${robotoSans.variable} ${robotoMono.variable} antialiased`}
       >
+        <div className="hidden md:block">
+          <TopBar />
+        </div>
         <Header />
         {children}
         <ScrollToTop />
