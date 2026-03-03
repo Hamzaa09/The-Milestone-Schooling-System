@@ -10,7 +10,7 @@ export default function TopBar() {
 
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
           <a
-            href="tel:+924211777800"
+            href="tel:+923002371990"
             className="flex items-center gap-2 hover:text-yellow-300 transition-colors"
           >
             <PhoneIcon />
@@ -47,7 +47,7 @@ export default function TopBar() {
           </a>
           
           <a
-            href="https://wa.me/3002371990"
+            href="https://wa.me/923002371990"
             target="_blank"
             rel="noopener noreferrer"
           >

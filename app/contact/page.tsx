@@ -456,7 +456,7 @@ const ContactPage: React.FC = () => {
                     {
                       label: "whatsapp",
                       src: "/icons/whatsapp.png",
-                      href: "https://wa.me/3002371990",
+                      href: "https://wa.me/923002371990",
                     },
                     {
                       label: "facebook",

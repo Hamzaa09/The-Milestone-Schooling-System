@@ -60,7 +60,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="https://wa.me/3002371990"
+                    href="https://wa.me/923002371990"
                     title=""
                     className="flex items-center justify-center text-white transition-all duration-200 bg-[#1a2a5e] rounded-full w-7 h-7 hover:bg-[#2e6fd4] focus:bg-[#2e6fd4]"
                   >
@@ -70,7 +70,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="https://wa.me/3002371990"
+                    href="https://wa.me/923002371990"
                     title=""
                     className="flex items-center justify-center text-white transition-all duration-200 bg-[#1a2a5e] rounded-full w-7 h-7 hover:bg-[#2e6fd4] focus:bg-[#2e6fd4]"
                   >
