@@ -32,8 +32,8 @@ export default function Header() {
       className={`w-full sticky top-0 z-50 ${scrolled ? "shadow-xl" : ""}`}
     >
       {/* Main Nav */}
-      <div className="bg-white border-b border-gray-200 shadow-sm pt-3 px-6 md:px-16">
-        <div className="max-w-7xl mx-auto flex items-center justify-between pb-3">
+      <div className="bg-white border-b border-gray-200 shadow-sm pt-3">
+        <div className="max-w-7xl mx-auto flex items-center justify-between pb-3 px-6 md:px-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
             {/* Shield logo placeholder — replace with <Image> if you have the asset */}
