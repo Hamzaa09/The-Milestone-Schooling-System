@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Fade from "embla-carousel-fade";
-import { NextButton, PrevButton, usePrevNextButtons } from "./arrowbuttons";
+import { usePrevNextButtons } from "./arrowbuttons";
 import { DotButton, useDotButton } from "./dotbutton";
+import Image from "next/image";
 
 type PropType = {
   slides: number[];
@@ -30,11 +30,13 @@ const EmblaCarousel = (props: PropType) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <img
+            <div className="embla__slide w-full" key={index}>
+              <Image
+                src={`/main-carousal/img-${index + 1}.jpg`}
+                alt={`Slide ${index + 1}`}
+                fill
                 className="embla__slide__img"
-                src={`/main-carousal/img-${index+1}.jpg`}
-                alt="img"
+                priority={index === 0}
               />
             </div>
           ))}

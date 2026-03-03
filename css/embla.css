@@ -20,15 +20,14 @@
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
+  position: relative; /* REQUIRED */
+  height: var(--slide-height); /* REQUIRED */
 }
 
 .embla__slide__img {
-  display: block;
-  width: 100%;
-  height: var(--slide-height);
-  object-fit: cover;
-  border-radius: 0; /* remove rounded corners for full width look */
+  object-fit: cover; /* only this needed */
 }
+
 .embla__controls {
   display: grid;
   grid-template-columns: auto 1fr;
