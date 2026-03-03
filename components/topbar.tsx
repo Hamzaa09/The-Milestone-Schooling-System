@@ -5,7 +5,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 export default function TopBar() {
   return (
     <div className="bg-[#2e6fd4] flex justify-center items-center">
-      <div className="w-full max-w-7xl text-white text-sm flex items-center justify-between gap-y-2 px-6 py-3">
+      <div className="w-full max-w-7xl text-white text-sm flex items-center justify-between gap-y-2 px-6 md:px-0 py-3">
         {/* Left: contact info */}
 
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3">

@@ -9,7 +9,7 @@ export default function Footer() {
     <section className="w-full px-6 md:px-16">
       <div className="pt-10 pb-5 sm:pt-16 lg:pt-24">
         <div className=" mx-auto max-w-7xl">
-          <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-5">
+          <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-0">
             <div className="col-span-2 md:col-span-3 lg:col-span-3 lg:pr-20">
               <Link href="/" className="flex gap-3 justify-start items-center">
                 <img className="w-auto h-15" src="logo.jpg" alt="" />
@@ -306,7 +306,7 @@ export default function Footer() {
                     <span className="text-[#1f5fc4] group-hover:text-[#f5c518] transition-colors duration-300 mt-0.5">
                       <MailIcon />
                     </span>
-                    owaisabdulkhaliq17@gmail.com
+                    <p>owaisabdulkhaliq17@gmail.com</p>
                   </a>
                 </li>
 
@@ -319,7 +319,7 @@ export default function Footer() {
                     <span className="text-[#1f5fc4] mt-2">
                       <FaLocationDot />
                     </span>
-                    5.G 8/4 Saeedabad, Baldia Town, Karachi. , Karachi,
+                    5.G 8/4 Saeedabad, Baldia Town, Karachi,
                     Pakistan, 75760
                   </li>
                 </a>
