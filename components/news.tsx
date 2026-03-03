@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/dist/client/link";
 import React, { useEffect, useState } from "react";
 
 interface NewsItem {
@@ -161,7 +162,7 @@ const NewsEvents: React.FC = () => {
         {SliderComponent ? (
           <SliderComponent {...settings}>
             {newsItems.map((item) => (
-              <div key={item.id} className="px-3">
+              <Link href="/events" key={item.id} className="px-3">
                 <div className="bg-white flex flex-col overflow-hidden shadow-lg">
                   <div className="w-full h-48 overflow-hidden">
                     <img
@@ -185,7 +186,7 @@ const NewsEvents: React.FC = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </SliderComponent>
         ) : (

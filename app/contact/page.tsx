@@ -99,7 +99,7 @@ const contactInfo = [
     ),
     label: "Address",
     value: "The Milestone Schooling System, Karachi, Pakistan",
-    href: "#",
+    href: "https://www.google.com/maps/place/The+Milestone+Schooling+System/@24.9140423,66.9620082,17z/data=!3m1!4b1!4m6!3m5!1s0x3eb315f32131f1a7:0xbbd8b2ff3e169e5c!8m2!3d24.9140423!4d66.9620082!16s%2Fg%2F11tcztqtxx?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D",
   },
   {
     icon: (
@@ -391,96 +391,6 @@ const ContactPage: React.FC = () => {
 
       <section className="bg-gray-50 py-16">
         <div className="space-y-16">
-          {/* ── ROW 2: FAQs ── */}
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-10">
-              <div className="flex items-center justify-center gap-3 mb-2">
-                <span
-                  className="h-0.5 w-8 rounded"
-                  style={{ background: "#2e6fd4" }}
-                />
-                <span
-                  className="text-xs font-bold uppercase tracking-widest"
-                  style={{ color: "#2e6fd4" }}
-                >
-                  FAQs
-                </span>
-                <span
-                  className="h-0.5 w-8 rounded"
-                  style={{ background: "#2e6fd4" }}
-                />
-              </div>
-              <h2
-                className="text-2xl md:text-3xl font-extrabold"
-                style={{ color: "#1a3272" }}
-              >
-                Frequently Asked Questions
-              </h2>
-              <p className="text-gray-400 text-sm mt-2 max-w-md mx-auto">
-                Can't find the answer you're looking for? Send us a message
-                above.
-              </p>
-            </div>
-
-            <div className="max-w-3xl mx-auto space-y-3">
-              {faqs.map((faq, i) => (
-                <FAQItem key={i} q={faq.q} a={faq.a} index={i} />
-              ))}
-            </div>
-          </div>
-
-          {/* ── ROW 3: Map placeholder ── */}
-
-          <div className="w-full overflow-hidden shadow-md">
-            <div
-              className="relative w-full h-64 md:h-120 bg-cover bg-center"
-              style={{ backgroundImage: "url('/map.png')" }}
-            >
-              {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/60" />
-
-              {/* Content */}
-              <div className="relative z-10 flex items-center justify-center h-full text-center text-white">
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-12 w-12 mx-auto mb-3 opacity-80"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                  <p className="font-bold text-lg drop-shadow-lg">
-                    The Milestone Schooling System
-                  </p>
-                  <p className="text-blue-200 text-sm mt-1 drop-shadow">
-                    Karachi, Pakistan
-                  </p>
-                  <a
-                    href="https://maps.google.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block px-6 py-2 rounded-full text-sm font-bold bg-white hover:bg-blue-50 transition-colors duration-200"
-                    style={{ color: "#1a3272" }}
-                  >
-                    View on Google Maps
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* ── ROW 1: Contact Info cards + Form ── */}
           <div className="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto px-6">
             {/* Left: Info cards */}
@@ -543,13 +453,26 @@ const ContactPage: React.FC = () => {
                 </p>
                 <div className="flex gap-3">
                   {[
-                    { label: "Facebook", src: "/icons/facebook.png" },
-                    { label: "Instagram", src: "/icons/instagram.png" },
-                    { label: "Twitter", src: "/icons/twitter.png" },
+                    {
+                      label: "whatsapp",
+                      src: "/icons/whatsapp.png",
+                      href: "https://wa.me/3002371990",
+                    },
+                    {
+                      label: "facebook",
+                      src: "/icons/facebook.png",
+                      href: "https://www.facebook.com/profile.php?id=100089885838245",
+                    },
+                    {
+                      label: "map",
+                      src: "/icons/map.png",
+                      href: "https://www.google.com/maps/place/The+Milestone+Schooling+System/@24.9140423,66.9620082,17z/data=!3m1!4b1!4m6!3m5!1s0x3eb315f32131f1a7:0xbbd8b2ff3e169e5c!8m2!3d24.9140423!4d66.9620082!16s%2Fg%2F11tcztqtxx?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D",
+                    },
                   ].map((s) => (
                     <a
                       key={s.label}
-                      href="#"
+                      href={s.href}
+                      target="_blank"
                       className="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-extrabold hover:scale-110 transition-transform duration-200"
                       aria-label={s.label}
                     >
@@ -572,6 +495,95 @@ const ContactPage: React.FC = () => {
                 Fill in the form below and we'll get back to you shortly.
               </p>
               <ContactForm />
+            </div>
+          </div>
+
+          {/* ── ROW 3: Map placeholder ── */}
+          <div className="w-full overflow-hidden shadow-md">
+            <div
+              className="relative w-full h-64 md:h-120 bg-cover bg-center"
+              style={{ backgroundImage: "url('/map.png')" }}
+            >
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-black/60" />
+
+              {/* Content */}
+              <div className="relative z-10 flex items-center justify-center h-full text-center text-white">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-12 w-12 mx-auto mb-3 opacity-80"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                  <p className="font-bold text-lg drop-shadow-lg">
+                    The Milestone Schooling System
+                  </p>
+                  <p className="text-blue-200 text-sm mt-1 drop-shadow">
+                    Karachi, Pakistan
+                  </p>
+                  <a
+                    href="https://www.google.com/maps/place/The+Milestone+Schooling+System/@24.9140423,66.9620082,17z/data=!3m1!4b1!4m6!3m5!1s0x3eb315f32131f1a7:0xbbd8b2ff3e169e5c!8m2!3d24.9140423!4d66.9620082!16s%2Fg%2F11tcztqtxx?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block px-6 py-2 rounded-full text-sm font-bold bg-white hover:bg-blue-50 transition-colors duration-200"
+                    style={{ color: "#1a3272" }}
+                  >
+                    View on Google Maps
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ── ROW 2: FAQs ── */}
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-10">
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <span
+                  className="h-0.5 w-8 rounded"
+                  style={{ background: "#2e6fd4" }}
+                />
+                <span
+                  className="text-xs font-bold uppercase tracking-widest"
+                  style={{ color: "#2e6fd4" }}
+                >
+                  FAQs
+                </span>
+                <span
+                  className="h-0.5 w-8 rounded"
+                  style={{ background: "#2e6fd4" }}
+                />
+              </div>
+              <h2
+                className="text-2xl md:text-3xl font-extrabold"
+                style={{ color: "#1a3272" }}
+              >
+                Frequently Asked Questions
+              </h2>
+              <p className="text-gray-400 text-sm mt-2 max-w-md mx-auto">
+                Can't find the answer you're looking for? Send us a message
+                above.
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto space-y-3">
+              {faqs.map((faq, i) => (
+                <FAQItem key={i} q={faq.q} a={faq.a} index={i} />
+              ))}
             </div>
           </div>
         </div>

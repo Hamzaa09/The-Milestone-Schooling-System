@@ -1,21 +1,17 @@
-import {
-  FaFacebook,
-  FaFacebookF,
-  FaInstagram,
-  FaMap,
-  FaTwitch,
-  FaTwitter,
-} from "react-icons/fa";
-import { FaLocationDot, FaX, FaXTwitter } from "react-icons/fa6";
+import Link from "next/link";
+import { FaFacebookF, FaMap } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { SiGmail } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <section className="w-full px-6">
+    <section className="w-full px-6 md:px-16">
       <div className="pt-10 pb-5 sm:pt-16 lg:pt-24">
         <div className=" mx-auto max-w-7xl">
           <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-5">
             <div className="col-span-2 md:col-span-3 lg:col-span-3 lg:pr-20">
-              <div className="flex gap-3 justify-start items-center">
+              <Link href="/" className="flex gap-3 justify-start items-center">
                 <img className="w-auto h-15" src="logo.jpg" alt="" />
 
                 <div className="leading-tight">
@@ -32,7 +28,7 @@ export default function Footer() {
                     SCHOOLING SYSTEM
                   </div>
                 </div>
-              </div>
+              </Link>
 
               <p className="text-base leading-relaxed text-gray-600 mt-7">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
@@ -44,7 +40,7 @@ export default function Footer() {
               <ul className="flex items-center space-x-3 mt-9">
                 <li>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=100089885838245"
                     title=""
                     className="flex items-center justify-center text-white transition-all duration-200 bg-[#1a2a5e] rounded-full w-7 h-7 hover:bg-[#2e6fd4] focus:bg-[#2e6fd4]"
                   >
@@ -54,31 +50,31 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href="#"
-                    title=""
-                    className="flex items-center justify-center text-white transition-all duration-200 bg-[#1a2a5e] rounded-full w-7 h-7 hover:bg-[#2e6fd4] focus:bg-[#2e6fd4]"
-                  >
-                    <FaXTwitter />
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    title=""
-                    className="flex items-center justify-center text-white transition-all duration-200 bg-[#1a2a5e] rounded-full w-7 h-7 hover:bg-[#2e6fd4] focus:bg-[#2e6fd4]"
-                  >
-                    <FaInstagram />
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
+                    href="https://www.google.com/maps/place/The+Milestone+Schooling+System/@24.9140423,66.9620082,17z/data=!3m1!4b1!4m6!3m5!1s0x3eb315f32131f1a7:0xbbd8b2ff3e169e5c!8m2!3d24.9140423!4d66.9620082!16s%2Fg%2F11tcztqtxx?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
                     title=""
                     className="flex items-center justify-center text-white transition-all duration-200 bg-[#1a2a5e] rounded-full w-7 h-7 hover:bg-[#2e6fd4] focus:bg-[#2e6fd4]"
                   >
                     <FaMap />
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://wa.me/3002371990"
+                    title=""
+                    className="flex items-center justify-center text-white transition-all duration-200 bg-[#1a2a5e] rounded-full w-7 h-7 hover:bg-[#2e6fd4] focus:bg-[#2e6fd4]"
+                  >
+                    <IoLogoWhatsapp />
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://wa.me/3002371990"
+                    title=""
+                    className="flex items-center justify-center text-white transition-all duration-200 bg-[#1a2a5e] rounded-full w-7 h-7 hover:bg-[#2e6fd4] focus:bg-[#2e6fd4]"
+                  >
+                    <SiGmail />
                   </a>
                 </li>
               </ul>
@@ -92,67 +88,131 @@ export default function Footer() {
 
               <ul className="mt-6 space-y-2 md:space-y-4">
                 <li>
-                  <a
-                    href="#"
-                    title=""
+                  <Link
+                    href={"/"}
                     className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
-                    title=""
+                  <Link
+                    href={"/about"}
                     className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
                   >
                     About Us
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
-                    title=""
+                  <Link
+                    href={"/admissions"}
                     className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
                   >
                     Admissions
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a
-                    href="#"
-                    title=""
+                  <Link
+                    href={"/academics"}
                     className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
                   >
                     Academics
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    title=""
+                  <Link
+                    href={"/staff"}
                     className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
                   >
                     Staff
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    title=""
+                  <Link
+                    href={"/contact"}
                     className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
 
             {/* Admission & Academics  */}
             <div>
+              <p className="text-lg font-bold tracking-wide text-[#1f5fc4] uppercase">
+                Related Links
+              </p>
+
+              <ul className="mt-6 space-y-2 md:space-y-4">
+                <li>
+                  <Link
+                    href={"/contact"}
+                    className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
+                  >
+                    FAQs
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href={"/contact"}
+                    className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
+                  >
+                    Locate Us
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href={"/contact"}
+                    className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
+                  >
+                    Send an Inquiry
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href={"/admission"}
+                    className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
+                  >
+                    Admission Process
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href={"/academics"}
+                    className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
+                  >
+                    Academics
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={"/staff"}
+                    className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
+                  >
+                    Staff
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={"/contact"}
+                    className="flex text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Admission & Academics  */}
+            {/* <div>
               <p className="text-lg font-bold tracking-wide text-[#1f5fc4] uppercase">
                 Related Links
               </p>
@@ -218,7 +278,7 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             <div className="col-span-2 md:col-span-1">
               <p className="text-lg font-bold tracking-wide text-[#1f5fc4] uppercase">
@@ -250,13 +310,19 @@ export default function Footer() {
                   </a>
                 </li>
 
-                <li className="flex gap-2 justify-start items-start text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]">
-                  <span className="text-[#1f5fc4] mt-2">
-                    <FaLocationDot />
-                  </span>
-                  5.G 8/4 Saeedabad, Baldia Town, Karachi. , Karachi, Pakistan,
-                  75760
-                </li>
+                <a
+                  href="https://www.google.com/maps/place/The+Milestone+Schooling+System/@24.9140423,66.9620082,17z/data=!3m1!4b1!4m6!3m5!1s0x3eb315f32131f1a7:0xbbd8b2ff3e169e5c!8m2!3d24.9140423!4d66.9620082!16s%2Fg%2F11tcztqtxx?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <li className="flex gap-2 justify-start items-start text-base text-black transition-all duration-200 hover:text-[#2e6fd4] focus:text-[#2e6fd4]">
+                    <span className="text-[#1f5fc4] mt-2">
+                      <FaLocationDot />
+                    </span>
+                    5.G 8/4 Saeedabad, Baldia Town, Karachi. , Karachi,
+                    Pakistan, 75760
+                  </li>
+                </a>
               </ul>
             </div>
           </div>

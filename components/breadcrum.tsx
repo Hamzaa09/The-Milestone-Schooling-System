@@ -14,9 +14,9 @@ interface BreadcrumbProps {
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, items }) => {
   return (
     <div
-      className="w-full py-12 px-6 md:px-16 lg:px-24 relative overflow-hidden bg-[#2e6fd4]"
+      className="w-full py-12 px-6 md:px-16 relative overflow-hidden bg-[#2e6fd4]"
     >
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto">
         <h1 className="text-3xl md:text-5xl font-bold text-white mb-3 leading-tight">
           {title}
         </h1>

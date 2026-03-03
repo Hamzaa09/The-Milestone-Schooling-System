@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const AboutSchool: React.FC = () => {
@@ -31,8 +32,8 @@ const AboutSchool: React.FC = () => {
           </p>
 
           {/* Learn More Button */}
-          <a
-            href="#"
+          <Link
+            href="/about"
             className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold uppercase tracking-wide px-6 py-3 transition-colors duration-200"
           >
             Learn More
@@ -50,7 +51,7 @@ const AboutSchool: React.FC = () => {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </a>
+          </Link>
         </div>
 
         {/* Right: Video Thumbnail */}
@@ -73,10 +74,7 @@ const AboutSchool: React.FC = () => {
 
                 <div className="leading-tight">
                   <p className="text-gray-800 text-sm font-medium">
-                    The Milestone
-                  </p>
-                  <p className="text-gray-800 text-sm font-medium">
-                    Schooling System
+                    The Milestone Schooling System
                   </p>
                 </div>
               </div>

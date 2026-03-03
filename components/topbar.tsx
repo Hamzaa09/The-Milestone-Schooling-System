@@ -1,5 +1,6 @@
-import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
+import { FaMap, FaSquareWhatsapp, FaXTwitter } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 export default function TopBar() {
   return (
@@ -19,7 +20,7 @@ export default function TopBar() {
           <span className="text-white select-none lg:block hidden">|</span>
 
           <a
-            href="#"
+            href="mailto:owaisabdulkhaliq17@gmail.com"
             className="flex items-center gap-2 hover:text-yellow-300 transition-colors"
           >
             <MailIcon />
@@ -29,9 +30,29 @@ export default function TopBar() {
 
         {/* Right: portal links */}
         <div className="flex items-center gap-y-2 gap-x-3 font-semibold tracking-wide text-sm md:text-xl flex-col md:flex-row">
-          <FaFacebook className="hover:text-yellow-300 hover:cursor-pointer" />
-          <FaXTwitter className="hover:text-yellow-300 hover:cursor-pointer" />
-          <FaInstagram className="hover:text-yellow-300 hover:cursor-pointer" />
+          <a
+            href="https://www.facebook.com/profile.php?id=100089885838245"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook className="hover:text-yellow-300 hover:cursor-pointer" />
+          </a>
+
+          <a
+            href="https://www.google.com/maps/place/The+Milestone+Schooling+System/@24.9140423,66.9620082,17z/data=!3m1!4b1!4m6!3m5!1s0x3eb315f32131f1a7:0xbbd8b2ff3e169e5c!8m2!3d24.9140423!4d66.9620082!16s%2Fg%2F11tcztqtxx?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaMap className="hover:text-yellow-300 hover:cursor-pointer" />
+          </a>
+          
+          <a
+            href="https://wa.me/3002371990"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IoLogoWhatsapp className="hover:text-yellow-300 hover:cursor-pointer" />
+          </a>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface AdmissionCard {
@@ -67,7 +68,7 @@ const Admissions: React.FC = () => {
       </h2>
 
       {/* Cards Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-3">
+      <Link href="/admissions" className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-3">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -87,7 +88,7 @@ const Admissions: React.FC = () => {
             </p>
           </div>
         ))}
-      </div>
+      </Link>
 
     </div>
   );

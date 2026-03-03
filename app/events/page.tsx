@@ -225,12 +225,6 @@ const NewsPage: React.FC = () => {
                 style={{ background: "#2e6fd4" }}
               />
             </div>
-            <h2
-              className="text-3xl md:text-4xl font-extrabold"
-              style={{ color: "#1a3272" }}
-            >
-              News &amp; Events
-            </h2>
             <p className="text-gray-400 text-sm mt-3 max-w-lg mx-auto">
               Stay up to date with the latest happenings, achievements, and
               announcements from The Milestone Schooling System.
